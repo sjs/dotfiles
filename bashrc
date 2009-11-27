@@ -3,14 +3,8 @@
 alias ls='ls --color'
 alias ll='ls -l'
 alias wg='wget -U AGENT'
-
-export PATH=$PATH:$HOME/django_src/django/bin
-export PYTHONPATH=$PYTHONPATH:$HOME/django_src:$HOME/django_projects
-
-bind "\C-e":clear-screen # bind ^e to clear
-alias cds="cd;clear"
-
-# Git shortcuts
+alias v='vim'
+alias vi='vim'
 
 source ~/.git-completion.bash
 alias gs="git status"
@@ -19,6 +13,16 @@ alias gd="git diff"
 alias gc="git commit"
 alias gp="git push"
 alias gu="git gui"
+
+export IRCNICK=steve
+export IRCNAME=steve
+export IRCUSER=steve
+
+export PATH=$PATH:$HOME/django_src/django/bin
+export PYTHONPATH=$PYTHONPATH:$HOME/django_src:$HOME/django_projects
+
+bind "\C-e":clear-screen # bind ^e to clear
+alias cds="cd;clear"
 
 # Extends use of 'cd'
 # cd ...       # cd ../..
@@ -54,3 +58,5 @@ extract () {
     echo "'$1' is not a valid file"
   fi
 }
+
+source ~/.bashrc.local
