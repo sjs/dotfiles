@@ -1,8 +1,10 @@
 # ~/.bash_profile: executed by bash(1) for login shells.
 
-alias ls='ls --color'
-alias ll='ls -l'
+alias ls='ls -a --color'
+alias ll='ls -l --color'
 alias wg='wget -U AGENT'
+alias free='free -m'
+alias home='cd $HOME_DIR'
 alias v='vim'
 alias vi='vim'
 
@@ -20,6 +22,8 @@ export IRCUSER=steve
 
 export PATH=$PATH:$HOME/django_src/django/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/django_src:$HOME/django_projects
+
+export EDITOR=/usr/bin/vim
 
 bind "\C-e":clear-screen # bind ^e to clear
 alias cds="cd;clear"
@@ -58,5 +62,11 @@ extract () {
     echo "'$1' is not a valid file"
   fi
 }
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/:\1/'
+}
+ 
+PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(parse_git_branch)\$ '
 
 source ~/.bashrc.local
