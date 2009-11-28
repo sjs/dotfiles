@@ -16,6 +16,7 @@ set showcmd
 set nocompatible				" vim, not vi
 set autoindent smartindent		" auto/smart indent
 set smarttab					" tab and backspace are smart
+set viminfo=""
 
 set scrolloff=5					" keep at least 5 lines above/below
 set sidescrolloff=5				" keep at least 5 lines left/right
