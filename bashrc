@@ -1,6 +1,6 @@
 # ~/.bash_profile: executed by bash(1) for login shells.
 
-alias ls='ls -a --color'
+alias ls='ls --color'
 alias ll='ls -l --color'
 alias wg='wget -U AGENT'
 alias free='free -m'
@@ -24,6 +24,9 @@ export PATH=$PATH:$HOME/django_src/django/bin
 export PYTHONPATH=$PYTHONPATH:$HOME/django_src:$HOME/django_projects
 
 export EDITOR=/usr/bin/vim
+
+HISTCONTROL=ignoreboth
+HISTSIZE=100
 
 bind "\C-e":clear-screen # bind ^e to clear
 alias cds="cd;clear"
