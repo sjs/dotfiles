@@ -16,14 +16,11 @@ alias gc="git commit"
 alias gp="git push"
 alias gu="git gui"
 
-export IRCNICK=steve
-export IRCNAME=steve
-export IRCUSER=steve
-
-export PATH=$PATH:$HOME/django_src/django/bin
-export PYTHONPATH=$PYTHONPATH:$HOME/django_src:$HOME/django_projects
+export PYTHONPATH=~/lib/python/
 
 export EDITOR=/usr/bin/vim
+
+MAILCHECK=-1
 
 HISTCONTROL=ignoreboth
 HISTSIZE=100
