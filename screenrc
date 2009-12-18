@@ -1,1 +1,11 @@
 termcapinfo xterm ti@:te@
+startup_message off             # bypass GPL notice (we're aware)
+activity "<%n>"                 # let you know when stuff happens!
+
+hardstatus alwayslastline "%w"
+hardstatus string '%{= m}%0c   %{= G}%-Lw%{r}(%{W}%50>%n%f %t%{= r})%{= G}%+Lw%<%-=   %?+%{m}%u %?%{C}%H%{-} %{w}%l%{-}'
+
+# Default screens
+screen -t irssi         1 irssi
+screen -t twitter       2 twitterbot .twitterbot.BLOWJOBS
+screen -t dev           3
