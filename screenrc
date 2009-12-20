@@ -3,9 +3,24 @@ startup_message off             # bypass GPL notice (we're aware)
 activity "<%n>"                 # let you know when stuff happens!
 
 hardstatus alwayslastline "%w"
-hardstatus string '%{= m}%0c   %{= G}%-Lw%{r}(%{W}%50>%n%f %t%{= r})%{= G}%+Lw%<%-=   %?+%{m}%u %?%{C}%H%{-} %{w}%l%{-}'
+hardstatus string ' %{= d}%-Lw%{r}[%{W}%50>%n%f %t%{= r}]%{= d}%+Lw%<%-=   %?+%{d}%u %?%{d}%H'
+
+bindkey -k F1 prev
+bindkey -k F2 next
+
+#remove some stupid / dangerous key bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+#make them better
+bind 'K' kill
+bind 'I' login on
+bind 'O' login off
+bind '}' history
 
 # Default screens
-screen -t irssi         1 irssi
-screen -t twitter       2 twitterbot .twitterbot.BLOWJOBS
-screen -t dev           3
+#screen -t status        0 
