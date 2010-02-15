@@ -3,7 +3,7 @@ startup_message off             # bypass GPL notice (we're aware)
 activity "<%n>"                 # let you know when stuff happens!
 
 hardstatus alwayslastline "%w"
-hardstatus string ' %{= d}%-Lw%{r}[%{W}%50>%n%f %t%{= r}]%{= d}%+Lw%<%-=   %?+%{d}%u %?%{d}%H'
+hardstatus string '%{= d}%-Lw%{r}[%{W}%50>%n%f %t%{= r}]%{= d}%+Lw%<%-=   %?+%{d}%u %?%{d}%H'
 
 bindkey -k F1 prev
 bindkey -k F2 next
